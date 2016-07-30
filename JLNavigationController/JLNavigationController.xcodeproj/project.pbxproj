@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B43193801D4C9CB700CD7356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431937F1D4C9CB700CD7356 /* AppDelegate.swift */; };
+		B43193821D4C9CB700CD7356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43193811D4C9CB700CD7356 /* ViewController.swift */; };
+		B43193851D4C9CB700CD7356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43193831D4C9CB700CD7356 /* Main.storyboard */; };
+		B43193871D4C9CB700CD7356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43193861D4C9CB700CD7356 /* Assets.xcassets */; };
+		B431938A1D4C9CB700CD7356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43193881D4C9CB700CD7356 /* LaunchScreen.storyboard */; };
+		B43193951D4C9CB700CD7356 /* JLNavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43193941D4C9CB700CD7356 /* JLNavigationControllerTests.swift */; };
+		B43193A01D4C9CB700CD7356 /* JLNavigationControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431939F1D4C9CB700CD7356 /* JLNavigationControllerUITests.swift */; };
+		B43193B21D4C9D7300CD7356 /* JLNavDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43193AE1D4C9D7300CD7356 /* JLNavDelegate.swift */; };
+		B43193B31D4C9D7300CD7356 /* JLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43193AF1D4C9D7300CD7356 /* JLNavigationController.swift */; };
+		B43193B41D4C9D7300CD7356 /* TransitioningAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43193B01D4C9D7300CD7356 /* TransitioningAnimation.swift */; };
+		B43193B51D4C9D7300CD7356 /* UIViewController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43193B11D4C9D7300CD7356 /* UIViewController_Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B43193911D4C9CB700CD7356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B43193741D4C9CB700CD7356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B431937B1D4C9CB700CD7356;
+			remoteInfo = JLNavigationController;
+		};
+		B431939C1D4C9CB700CD7356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B43193741D4C9CB700CD7356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B431937B1D4C9CB700CD7356;
+			remoteInfo = JLNavigationController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B431937C1D4C9CB700CD7356 /* JLNavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLNavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B431937F1D4C9CB700CD7356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B43193811D4C9CB700CD7356 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B43193841D4C9CB700CD7356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B43193861D4C9CB700CD7356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B43193891D4C9CB700CD7356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B431938B1D4C9CB700CD7356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B43193901D4C9CB700CD7356 /* JLNavigationControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLNavigationControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43193941D4C9CB700CD7356 /* JLNavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLNavigationControllerTests.swift; sourceTree = "<group>"; };
+		B43193961D4C9CB700CD7356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B431939B1D4C9CB700CD7356 /* JLNavigationControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLNavigationControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B431939F1D4C9CB700CD7356 /* JLNavigationControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLNavigationControllerUITests.swift; sourceTree = "<group>"; };
+		B43193A11D4C9CB700CD7356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B43193AE1D4C9D7300CD7356 /* JLNavDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLNavDelegate.swift; sourceTree = "<group>"; };
+		B43193AF1D4C9D7300CD7356 /* JLNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLNavigationController.swift; sourceTree = "<group>"; };
+		B43193B01D4C9D7300CD7356 /* TransitioningAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitioningAnimation.swift; sourceTree = "<group>"; };
+		B43193B11D4C9D7300CD7356 /* UIViewController_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController_Extension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B43193791D4C9CB700CD7356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B431938D1D4C9CB700CD7356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43193981D4C9CB700CD7356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B43193731D4C9CB700CD7356 = {
+			isa = PBXGroup;
+			children = (
+				B431937E1D4C9CB700CD7356 /* JLNavigationController */,
+				B43193931D4C9CB700CD7356 /* JLNavigationControllerTests */,
+				B431939E1D4C9CB700CD7356 /* JLNavigationControllerUITests */,
+				B431937D1D4C9CB700CD7356 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B431937D1D4C9CB700CD7356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B431937C1D4C9CB700CD7356 /* JLNavigationController.app */,
+				B43193901D4C9CB700CD7356 /* JLNavigationControllerTests.xctest */,
+				B431939B1D4C9CB700CD7356 /* JLNavigationControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B431937E1D4C9CB700CD7356 /* JLNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				B43193AD1D4C9D7300CD7356 /* JLNav */,
+				B431937F1D4C9CB700CD7356 /* AppDelegate.swift */,
+				B43193811D4C9CB700CD7356 /* ViewController.swift */,
+				B43193831D4C9CB700CD7356 /* Main.storyboard */,
+				B43193861D4C9CB700CD7356 /* Assets.xcassets */,
+				B43193881D4C9CB700CD7356 /* LaunchScreen.storyboard */,
+				B431938B1D4C9CB700CD7356 /* Info.plist */,
+			);
+			path = JLNavigationController;
+			sourceTree = "<group>";
+		};
+		B43193931D4C9CB700CD7356 /* JLNavigationControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B43193941D4C9CB700CD7356 /* JLNavigationControllerTests.swift */,
+				B43193961D4C9CB700CD7356 /* Info.plist */,
+			);
+			path = JLNavigationControllerTests;
+			sourceTree = "<group>";
+		};
+		B431939E1D4C9CB700CD7356 /* JLNavigationControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B431939F1D4C9CB700CD7356 /* JLNavigationControllerUITests.swift */,
+				B43193A11D4C9CB700CD7356 /* Info.plist */,
+			);
+			path = JLNavigationControllerUITests;
+			sourceTree = "<group>";
+		};
+		B43193AD1D4C9D7300CD7356 /* JLNav */ = {
+			isa = PBXGroup;
+			children = (
+				B43193AE1D4C9D7300CD7356 /* JLNavDelegate.swift */,
+				B43193AF1D4C9D7300CD7356 /* JLNavigationController.swift */,
+				B43193B01D4C9D7300CD7356 /* TransitioningAnimation.swift */,
+				B43193B11D4C9D7300CD7356 /* UIViewController_Extension.swift */,
+			);
+			path = JLNav;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B431937B1D4C9CB700CD7356 /* JLNavigationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43193A41D4C9CB700CD7356 /* Build configuration list for PBXNativeTarget "JLNavigationController" */;
+			buildPhases = (
+				B43193781D4C9CB700CD7356 /* Sources */,
+				B43193791D4C9CB700CD7356 /* Frameworks */,
+				B431937A1D4C9CB700CD7356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JLNavigationController;
+			productName = JLNavigationController;
+			productReference = B431937C1D4C9CB700CD7356 /* JLNavigationController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B431938F1D4C9CB700CD7356 /* JLNavigationControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43193A71D4C9CB700CD7356 /* Build configuration list for PBXNativeTarget "JLNavigationControllerTests" */;
+			buildPhases = (
+				B431938C1D4C9CB700CD7356 /* Sources */,
+				B431938D1D4C9CB700CD7356 /* Frameworks */,
+				B431938E1D4C9CB700CD7356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B43193921D4C9CB700CD7356 /* PBXTargetDependency */,
+			);
+			name = JLNavigationControllerTests;
+			productName = JLNavigationControllerTests;
+			productReference = B43193901D4C9CB700CD7356 /* JLNavigationControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B431939A1D4C9CB700CD7356 /* JLNavigationControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43193AA1D4C9CB700CD7356 /* Build configuration list for PBXNativeTarget "JLNavigationControllerUITests" */;
+			buildPhases = (
+				B43193971D4C9CB700CD7356 /* Sources */,
+				B43193981D4C9CB700CD7356 /* Frameworks */,
+				B43193991D4C9CB700CD7356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B431939D1D4C9CB700CD7356 /* PBXTargetDependency */,
+			);
+			name = JLNavigationControllerUITests;
+			productName = JLNavigationControllerUITests;
+			productReference = B431939B1D4C9CB700CD7356 /* JLNavigationControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B43193741D4C9CB700CD7356 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = DEMO;
+				TargetAttributes = {
+					B431937B1D4C9CB700CD7356 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BMLPM3B65V;
+					};
+					B431938F1D4C9CB700CD7356 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BMLPM3B65V;
+						TestTargetID = B431937B1D4C9CB700CD7356;
+					};
+					B431939A1D4C9CB700CD7356 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BMLPM3B65V;
+						TestTargetID = B431937B1D4C9CB700CD7356;
+					};
+				};
+			};
+			buildConfigurationList = B43193771D4C9CB700CD7356 /* Build configuration list for PBXProject "JLNavigationController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B43193731D4C9CB700CD7356;
+			productRefGroup = B431937D1D4C9CB700CD7356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B431937B1D4C9CB700CD7356 /* JLNavigationController */,
+				B431938F1D4C9CB700CD7356 /* JLNavigationControllerTests */,
+				B431939A1D4C9CB700CD7356 /* JLNavigationControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B431937A1D4C9CB700CD7356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B431938A1D4C9CB700CD7356 /* LaunchScreen.storyboard in Resources */,
+				B43193871D4C9CB700CD7356 /* Assets.xcassets in Resources */,
+				B43193851D4C9CB700CD7356 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B431938E1D4C9CB700CD7356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43193991D4C9CB700CD7356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B43193781D4C9CB700CD7356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43193821D4C9CB700CD7356 /* ViewController.swift in Sources */,
+				B43193B31D4C9D7300CD7356 /* JLNavigationController.swift in Sources */,
+				B43193B51D4C9D7300CD7356 /* UIViewController_Extension.swift in Sources */,
+				B43193801D4C9CB700CD7356 /* AppDelegate.swift in Sources */,
+				B43193B41D4C9D7300CD7356 /* TransitioningAnimation.swift in Sources */,
+				B43193B21D4C9D7300CD7356 /* JLNavDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B431938C1D4C9CB700CD7356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43193951D4C9CB700CD7356 /* JLNavigationControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43193971D4C9CB700CD7356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43193A01D4C9CB700CD7356 /* JLNavigationControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B43193921D4C9CB700CD7356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B431937B1D4C9CB700CD7356 /* JLNavigationController */;
+			targetProxy = B43193911D4C9CB700CD7356 /* PBXContainerItemProxy */;
+		};
+		B431939D1D4C9CB700CD7356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B431937B1D4C9CB700CD7356 /* JLNavigationController */;
+			targetProxy = B431939C1D4C9CB700CD7356 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B43193831D4C9CB700CD7356 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B43193841D4C9CB700CD7356 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B43193881D4C9CB700CD7356 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B43193891D4C9CB700CD7356 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B43193A21D4C9CB700CD7356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B43193A31D4C9CB700CD7356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B43193A51D4C9CB700CD7356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JLNavigationController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B43193A61D4C9CB700CD7356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JLNavigationController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B43193A81D4C9CB700CD7356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JLNavigationControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLNavigationController.app/JLNavigationController";
+			};
+			name = Debug;
+		};
+		B43193A91D4C9CB700CD7356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JLNavigationControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLNavigationController.app/JLNavigationController";
+			};
+			name = Release;
+		};
+		B43193AB1D4C9CB700CD7356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JLNavigationControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JLNavigationController;
+			};
+			name = Debug;
+		};
+		B43193AC1D4C9CB700CD7356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JLNavigationControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JLNavigationController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B43193771D4C9CB700CD7356 /* Build configuration list for PBXProject "JLNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43193A21D4C9CB700CD7356 /* Debug */,
+				B43193A31D4C9CB700CD7356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B43193A41D4C9CB700CD7356 /* Build configuration list for PBXNativeTarget "JLNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43193A51D4C9CB700CD7356 /* Debug */,
+				B43193A61D4C9CB700CD7356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B43193A71D4C9CB700CD7356 /* Build configuration list for PBXNativeTarget "JLNavigationControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43193A81D4C9CB700CD7356 /* Debug */,
+				B43193A91D4C9CB700CD7356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B43193AA1D4C9CB700CD7356 /* Build configuration list for PBXNativeTarget "JLNavigationControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43193AB1D4C9CB700CD7356 /* Debug */,
+				B43193AC1D4C9CB700CD7356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B43193741D4C9CB700CD7356 /* Project object */;
+}
