@@ -28,7 +28,7 @@ extension UIViewController {
         
         set {
         
-            objc_setAssociatedObject(self, &kInteractivePopGestureAble, NSNumber(value: newValue as Bool), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &kInteractivePopGestureAble, NSNumber(bool: newValue), objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             
         }
     

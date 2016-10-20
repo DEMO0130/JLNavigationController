@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias JLNavgationControllerProtocol = UINavigationControllerDelegate & UIGestureRecognizerDelegate & JLNavgationControllerDelegate
+typealias JLNavgationControllerProtocol = protocol<UINavigationControllerDelegate, UIGestureRecognizerDelegate, JLNavgationControllerDelegate>
 
 class JLNavigationController: UINavigationController {
     
@@ -23,13 +23,13 @@ class JLNavigationController: UINavigationController {
         
         super.viewDidLoad()
         
-        self.interactivePopGestureRecognizer?.isEnabled = false
+        self.interactivePopGestureRecognizer?.enabled = false
 
     }
     
     deinit {  print("deinit") }
     
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    override func pushViewController(viewController: UIViewController, animated: Bool) {
 
         if self.interactivePopGestureRecognizer?.view?.gestureRecognizers?.contains(jlDelegate.interactiveGesture) != true {
             

@@ -214,18 +214,15 @@
 					B431937B1D4C9CB700CD7356 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BMLPM3B65V;
-						LastSwiftMigration = 0800;
 					};
 					B431938F1D4C9CB700CD7356 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BMLPM3B65V;
-						LastSwiftMigration = 0800;
 						TestTargetID = B431937B1D4C9CB700CD7356;
 					};
 					B431939A1D4C9CB700CD7356 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BMLPM3B65V;
-						LastSwiftMigration = 0800;
 						TestTargetID = B431937B1D4C9CB700CD7356;
 					};
 				};
@@ -433,7 +430,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -445,7 +441,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -457,7 +452,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLNavigationController.app/JLNavigationController";
 			};
 			name = Debug;
@@ -470,7 +464,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLNavigationController.app/JLNavigationController";
 			};
 			name = Release;
@@ -482,7 +475,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationControllerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = JLNavigationController;
 			};
 			name = Debug;
@@ -494,7 +486,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLNavigationControllerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = JLNavigationController;
 			};
 			name = Release;
@@ -518,7 +509,6 @@
 				B43193A61D4C9CB700CD7356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		B43193A71D4C9CB700CD7356 /* Build configuration list for PBXNativeTarget "JLNavigationControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -527,7 +517,6 @@
 				B43193A91D4C9CB700CD7356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		B43193AA1D4C9CB700CD7356 /* Build configuration list for PBXNativeTarget "JLNavigationControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,7 +525,6 @@
 				B43193AC1D4C9CB700CD7356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

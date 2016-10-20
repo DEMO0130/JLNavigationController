@@ -7,26 +7,6 @@
 //
 
 import UIKit
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
-
 
 protocol JLNavgationControllerDelegate {
     
@@ -89,16 +69,16 @@ class JLNavDelegate: NSObject, JLNavgationControllerDelegate {
 // MARK: - UINavigationControllerDelegate
 extension JLNavDelegate: UINavigationControllerDelegate {
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         
         switch operation {
             
-        case .push:
+        case .Push:
             
             return pushAnimationObj
             
-        case .pop:
+        case .Pop:
             
             return popAnimationObj
             
@@ -109,9 +89,9 @@ extension JLNavDelegate: UINavigationControllerDelegate {
         
     }
     
-    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         
-        guard animationController.isKind(of: PopAnimation.self) else {
+        guard animationController.isKindOfClass(PopAnimation) else {
             
             return nil
             
@@ -127,36 +107,36 @@ extension JLNavDelegate: UINavigationControllerDelegate {
 // MARK: - UIGestureRecognizerDelegate
 extension JLNavDelegate: UIGestureRecognizerDelegate {
     
-    func navigationPop(_ sender: UIPanGestureRecognizer) {
+    func navigationPop(sender: UIPanGestureRecognizer) {
         
-        let senderX = sender.translation(in: sender.view).x
+        let senderX = sender.translationInView(sender.view).x
         
-        let progress = senderX / (sender.view?.bounds ?? CGRect.zero).width
+        let progress = senderX / CGRectGetWidth(sender.view?.bounds ?? CGRectZero)
         
         switch sender.state {
-        case .began:
+        case .Began:
             
             self.interactiveTransition = UIPercentDrivenInteractiveTransition()
             
-            self.navigation?.popViewController(animated: true)
+            self.navigation?.popViewControllerAnimated(true)
             
-        case .changed:
+        case .Changed:
             
-            interactiveTransition?.update(progress)
+            interactiveTransition?.updateInteractiveTransition(progress)
             
-        case .ended, .cancelled:
+        case .Ended, .Cancelled:
             
             if progress > 0.5 {
-                interactiveTransition?.finish()
+                interactiveTransition?.finishInteractiveTransition()
             } else {
-                interactiveTransition?.cancel()
+                interactiveTransition?.cancelInteractiveTransition()
             }
             
             interactiveTransition = nil
             
         default:
             
-            interactiveTransition?.cancel()
+            interactiveTransition?.cancelInteractiveTransition()
             
             interactiveTransition = nil
             
@@ -165,7 +145,7 @@ extension JLNavDelegate: UIGestureRecognizerDelegate {
         
     }
     
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
         
         guard self.navigation?.viewControllers.count > 1 else {
             
@@ -186,7 +166,7 @@ extension JLNavDelegate: UIGestureRecognizerDelegate {
             
         }
         
-        guard sender.translation(in: sender.view).x >= 0 else {
+        guard sender.translationInView(sender.view).x >= 0 else {
             
             return false
             

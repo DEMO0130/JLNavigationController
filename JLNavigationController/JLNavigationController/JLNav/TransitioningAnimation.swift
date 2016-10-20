@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal let kAnimationDuration: TimeInterval = 0.8
+internal let kAnimationDuration: NSTimeInterval = 0.8
 
 internal let kAffineTransformScale: CGFloat = 0.2
 
@@ -18,41 +18,41 @@ class PushAnimation: NSObject {
 
 extension PushAnimation: UIViewControllerAnimatedTransitioning {
     
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return kAnimationDuration
     }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        guard let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) else {
+        guard let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) else {
             
             return
             
         }
         
-        guard let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else {
+        guard let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) else {
             
             return
             
         }
         
-        guard let containerView: UIView = transitionContext.containerView else {
+        guard let containerView = transitionContext.containerView() else {
             
             return
             
         }
         
-        let toVCFrame = transitionContext.finalFrame(for: toVC)
+        let toVCFrame = transitionContext.finalFrameForViewController(toVC)
         
-        toVC.view.frame = toVCFrame.offsetBy(dx: 0, dy: UIScreen.main.bounds.height)
+        toVC.view.frame = CGRectOffset(toVCFrame, 0, CGRectGetHeight(UIScreen.mainScreen().bounds))
         
         containerView.addSubview(toVC.view)
 
-        UIView.animate(withDuration: self.transitionDuration(using: transitionContext),
+        UIView.animateWithDuration(self.transitionDuration(transitionContext),
                                    delay: 0.0,
                                    usingSpringWithDamping: 0.5,
                                    initialSpringVelocity: 0.0,
-                                   options: UIViewAnimationOptions(),
+                                   options: .CurveEaseInOut,
                                    animations: {
                                     
             fromVC.view.alpha = 0.8
@@ -61,7 +61,7 @@ extension PushAnimation: UIViewControllerAnimatedTransitioning {
             
         }) { (finished: Bool) in
             
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
             
             fromVC.view.alpha = 1.0
         }
@@ -77,25 +77,25 @@ class PopAnimation: NSObject {
 
 extension PopAnimation: UIViewControllerAnimatedTransitioning {
 
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return kAnimationDuration
     }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        guard let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) else {
+        guard let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) else {
         
             return
         
         }
         
-        guard let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else {
+        guard let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) else {
         
             return
             
         }
         
-        guard let containerView: UIView = transitionContext.containerView else {
+        guard let containerView = transitionContext.containerView() else {
             
             return
             
@@ -104,17 +104,17 @@ extension PopAnimation: UIViewControllerAnimatedTransitioning {
         
         containerView.insertSubview(toVC.view, belowSubview: fromVC.view)
         
-        UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
+        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
             
-            fromVC.view.transform = CGAffineTransform(scaleX: kAffineTransformScale, y: kAffineTransformScale)
+            fromVC.view.transform = CGAffineTransformMakeScale(kAffineTransformScale, kAffineTransformScale)
             
             fromVC.view.alpha = 0.5
             
-        }, completion: { (finished: Bool) in
+        }) { (finished: Bool) in
             
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
             
-        }) 
+        }
         
     }
     
